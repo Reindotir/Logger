@@ -1,6 +1,11 @@
-#include "../App/App.h"
+#include "../ServiceLocator/ServiceLocator.h"
+#include "../EventBus/EventBus.h"
 
 class Context {
 public:
-    App& app;
+    Context(ServiceLocator& services, EventBus& bus)
+        : services(services), bus(bus) {};
+
+    ServiceLocator& services;
+    EventBus& bus;
 };

@@ -2,7 +2,7 @@
 
 class App {
 protected:
-    Context& context;
+    Context* context;
     
 public:
     void init();
